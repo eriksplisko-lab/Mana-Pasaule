@@ -1,25 +1,16 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
-    font-family:Arial,sans-serif;
-
-    height:100vh;
-
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
     display:flex;
     justify-content:center;
     align-items:center;
-
-    background:linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
+    height:100vh;
     overflow:hidden;
 }
 
 .container{
     text-align:center;
-
     animation:fadeIn 1.5s ease;
 }
 
@@ -27,53 +18,49 @@ h1{
     color:white;
     font-size:70px;
     margin-bottom:25px;
+    animation:slideDown 1s ease;
 }
 
 p{
     color:white;
     font-size:24px;
     margin-bottom:40px;
+    animation:fadeIn 2s ease;
 }
 
 button{
-
     padding:18px 50px;
-
     font-size:24px;
-
     border:none;
-
     border-radius:14px;
-
     background:#00d26a;
-
     color:white;
-
     cursor:pointer;
-
     transition:0.3s;
 }
 
 button:hover{
-
     transform:scale(1.08);
-
     background:#00ff84;
-
     box-shadow:0 0 30px #00ff84;
-
 }
 
 @keyframes fadeIn{
-
-from{
-opacity:0;
-transform:translateY(40px);
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
 }
 
-to{
-opacity:1;
-transform:translateY(0);
-}
-
+@keyframes slideDown{
+    from{
+        transform:translateY(-80px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
 }

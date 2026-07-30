@@ -1,36 +1,79 @@
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
     font-family:Arial,sans-serif;
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:white;
-    text-align:center;
+
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
+    overflow:hidden;
 }
 
 .container{
-    margin-top:120px;
+    text-align:center;
+
+    animation:fadeIn 1.5s ease;
 }
 
 h1{
-    font-size:60px;
+    color:white;
+    font-size:70px;
+    margin-bottom:25px;
 }
 
 p{
-    font-size:22px;
+    color:white;
+    font-size:24px;
+    margin-bottom:40px;
 }
 
 button{
-    margin-top:30px;
-    padding:18px 40px;
-    font-size:22px;
+
+    padding:18px 50px;
+
+    font-size:24px;
+
     border:none;
-    border-radius:12px;
-    background:#00c853;
+
+    border-radius:14px;
+
+    background:#00d26a;
+
     color:white;
+
     cursor:pointer;
+
     transition:0.3s;
 }
 
 button:hover{
-    background:#00e676;
-    transform:scale(1.05);
+
+    transform:scale(1.08);
+
+    background:#00ff84;
+
+    box-shadow:0 0 30px #00ff84;
+
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
 }
